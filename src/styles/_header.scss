@@ -1,0 +1,86 @@
+@import 'variables';
+
+.header {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  padding: 24px 40px;
+  background-color: $bg-color;
+
+  &__logo-link {
+    color: $text-primary;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: larger;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    text-decoration: none;
+    color: $text-primary;
+    font-weight: 600;
+    transition: gap 0.3s ease;
+    cursor: default;
+
+
+    .header__phone-text {
+      opacity: 0;
+      width: 0;
+      height: 30px;
+      overflow: hidden;
+      transition:
+        opacity 0.3s ease,
+        width 0.3s ease;
+    }
+
+
+    &:hover {
+      gap: 12px;
+
+      .header__phone-text {
+        opacity: 1;
+        width: auto;
+      }
+    }
+  }
+
+  &__phone-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    // Ícone padrão
+    background-image: url('../images/Icon-Phone-call.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+  }
+
+  &__menu-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: default;
+
+    // Ícone padrão
+    background-image: url('../images/Icon-Burger-menu.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+  }
+
+  &__menu-btn:hover &__menu-icon {
+    background-image: url('../images/Icon-Burger-menu-hover.png');
+  }
+}

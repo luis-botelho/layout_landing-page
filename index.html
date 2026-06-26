@@ -6,17 +6,74 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Landing Page</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./images/icon.svg"
+    />
     <link
       rel="stylesheet"
-      href="src/styles/main.scss"
+      href="./src/styles/main.scss"
     />
-    <script
-      src="src/scripts/main.js"
-      defer
-    ></script>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>MYBIKE</title>
   </head>
   <body>
-    <h1>Landing Page</h1>
+    <header
+      class="header"
+      id="top"
+    >
+      <a
+        href="#top"
+        class="header__logo-link"
+      >
+        MyBike
+      </a>
+
+      <div class="header__actions">
+        <a href="tel:+12345555555" class="header__contact-link">
+          <span class="header__phone-text">+1 234 555-55-55</span>
+          <span class="header__phone-icon"></span>
+        </a>
+
+        <a href="#menu" class="header__menu-btn">
+          <span class="header__menu-icon"></span>
+        </a>
+      </div>
+    </header>
+    <div class="menu" id="menu">
+      <div class="menu__top">
+        <a href="#" class="menu__close">
+          <img src="./images/close.svg" alt="Close menu" />
+        </a>
+      </div>
+
+      <nav class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#home" class="menu__link">HOME</a></li>
+          <li class="menu__item"><a href="#about" class="menu__link">ABOUT US</a></li>
+          <li class="menu__item"><a href="#compare" class="menu__link">COMPARE BIKES</a></li>
+          <li class="menu__item"><a href="#details" class="menu__link">DETAILS</a></li>
+          <li class="menu__item"><a href="#contacts" class="menu__link">CONTACTS</a></li>
+        </ul>
+
+        <div class="menu__footer">
+          <a href="tel:+12345555555" class="menu__phone">+1 234 555-55-55</a>
+          <a href="#" class="menu__button">BOOK A TEST RIDE</a>
+        </div>
+      </nav>
+    </div>
   </body>
 </html>

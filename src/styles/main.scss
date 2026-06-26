@@ -1,3 +1,16 @@
-body {
+// imports
+
+@import 'header';
+@import 'variables';
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-main;
+  background-color: $bg-color;
+  color: $text-primary;
 }
