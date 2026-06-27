@@ -1,19 +1,35 @@
 @import 'variables';
+@import 'mixins';
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-
   padding: 24px 40px;
   background-color: $bg-color;
+
+  @include on-tablet {
+    padding: 32px 72px;
+  }
+
+  @include on-desktop {
+    padding: 36px 120px;
+  }
 
   &__logo-link {
     color: $text-primary;
     text-decoration: none;
     font-weight: 700;
-    font-size: larger;
+    font-size: 40px;
+
+    @include on-tablet {
+      font-size: 32px;
+    }
+
+    @include on-desktop {
+      font-size: 40px;
+    }
   }
 
   &__actions {
@@ -23,7 +39,6 @@
   }
 
   &__contact-link {
-    display: flex;
     align-items: center;
     gap: 0;
     text-decoration: none;
@@ -31,7 +46,11 @@
     font-weight: 600;
     transition: gap 0.3s ease;
     cursor: default;
+    display: none;
 
+    @include on-tablet {
+      display: contents;
+    }
 
     .header__phone-text {
       opacity: 0;
@@ -39,10 +58,9 @@
       height: 30px;
       overflow: hidden;
       transition:
-        opacity 0.3s ease,
-        width 0.3s ease;
+        max-width 0.3s ease,
+        opacity 0.3s ease;
     }
-
 
     &:hover {
       gap: 12px;
@@ -56,8 +74,13 @@
 
   &__phone-icon {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
+
+    @include on-tablet {
+      width: 32px;
+      height: 32px;
+    }
 
     // Ícone padrão
     background-image: url('../images/Icon-Phone-call.png');
@@ -68,8 +91,14 @@
 
   &__menu-icon {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
+
+    @include on-tablet {
+      width: 32px;
+      height: 32px;
+    }
+
     cursor: default;
 
     // Ícone padrão

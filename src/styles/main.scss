@@ -1,7 +1,9 @@
 // imports
 
-@import 'header';
 @import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'menu';
 
 * {
   box-sizing: border-box;
