@@ -1,0 +1,68 @@
+@import 'variables';
+@import 'mixins';
+
+.contact {
+
+  padding: 120px 20px;
+
+  &__content{
+
+    display:grid;
+    gap:64px;
+
+  }
+
+  @include on-tablet{
+
+    &__content{
+
+      grid-template-columns:1fr 1fr;
+
+    }
+
+  }
+
+}
+
+.contact__form {
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:16px;
+
+  input,
+  textarea{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+  }
+
+  textarea{
+
+    resize:none;
+
+    height:140px;
+
+  }
+
+  button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+  }
+
+}
