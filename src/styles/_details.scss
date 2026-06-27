@@ -37,7 +37,6 @@
 }
 
 .detail-card {
-
   &__images {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -47,13 +46,12 @@
     img {
       width: 100%;
       display: block;
-      transition: .3s;
+      transition: 0.3s;
     }
 
     img:hover {
       transform: scale(1.03);
     }
-
   }
 
   &__title {
@@ -63,5 +61,4 @@
   &__text {
     color: #bdbdbd;
   }
-
 }

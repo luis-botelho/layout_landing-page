@@ -23,10 +23,9 @@
 }
 
 .bike-card {
-
   &__image {
     width: 100%;
-    transition: transform .3s;
+    transition: transform 0.3s;
   }
 
   &:hover &__image {
