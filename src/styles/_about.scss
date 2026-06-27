@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+
+.about {
+  padding: 80px 20px;
+
+  &__container {
+    display: grid;
+    gap: 32px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__text {
+    line-height: 1.6;
+    color: #bdbdbd;
+  }
+
+  @include on-tablet {
+    &__container {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+}
