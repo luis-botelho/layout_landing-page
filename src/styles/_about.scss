@@ -5,8 +5,11 @@
   padding: 80px 20px;
 
   &__container {
-    display: grid;
-    gap: 32px;
+    display: flex;
+
+    // gap: 32px;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   &__title {
@@ -17,6 +20,7 @@
   &__text {
     line-height: 1.6;
     color: #bdbdbd;
+    width: 50%;
   }
 
   @include on-tablet {

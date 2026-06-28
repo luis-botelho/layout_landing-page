@@ -9,6 +9,10 @@
   padding: 24px 40px;
   background-color: transparent;
 
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+
   @include on-tablet {
     padding: 32px 72px;
   }
